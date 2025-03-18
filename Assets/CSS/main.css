@@ -655,6 +655,9 @@
   .opacity-60 {
     opacity: 60%;
   }
+  .opacity-70 {
+    opacity: 70%;
+  }
   .opacity-80 {
     opacity: 80%;
   }
@@ -718,11 +721,54 @@
       color: #e0fb52;
     }
   }
+  .after\:h-px {
+    &::after {
+      content: var(--tw-content);
+      height: 1px;
+    }
+  }
+  .after\:w-0 {
+    &::after {
+      content: var(--tw-content);
+      width: calc(var(--spacing) * 0);
+    }
+  }
+  .after\:bg-\[\#131313\] {
+    &::after {
+      content: var(--tw-content);
+      background-color: #131313;
+    }
+  }
+  .after\:transition-all {
+    &::after {
+      content: var(--tw-content);
+      transition-property: all;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .after\:duration-500 {
+    &::after {
+      content: var(--tw-content);
+      --tw-duration: 500ms;
+      transition-duration: 500ms;
+    }
+  }
   .hover\:-translate-y-3 {
     &:hover {
       @media (hover: hover) {
         --tw-translate-y: calc(var(--spacing) * -3);
         translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .hover\:after\:w-full {
+    &:hover {
+      @media (hover: hover) {
+        &::after {
+          content: var(--tw-content);
+          width: 100%;
+        }
       }
     }
   }
@@ -823,5 +869,10 @@
 }
 @property --tw-duration {
   syntax: "*";
+  inherits: false;
+}
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
   inherits: false;
 }

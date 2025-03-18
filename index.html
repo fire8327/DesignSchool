@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
     <link rel="stylesheet" href="Assets/CSS/main.css">
 </head>
-<body class="text-xl scroll-smooth">
-    <header class="flex items-center justify-between container mx-auto py-4 px-10">
+<body class="text-xl text-[#131313]">
+    <header class="flex items-center justify-between container mx-auto py-4 px-10" id="header">
         <div class="flex flex-col">
-            <a href="" class="text-2xl font-mono font-medium">DesignSchool</a>
+            <a href="#header" class="text-2xl font-mono font-medium">DesignSchool</a>
             <p class="text-sm text-gray-400">профильная онлайн-школа дизайна</p>
         </div>
         <div class="flex items-center gap-6 font-mono">
-            <a href="">О курсе</a>
-            <a href="">Преимущества</a>
-            <a href="">Выбор курса</a>
+            <a class="flex flex-col after:w-0 after:h-px after:bg-[#131313] after:transition-all after:duration-500 hover:after:w-full" href="#advantages">Преимущества</a>
+            <a class="flex flex-col after:w-0 after:h-px after:bg-[#131313] after:transition-all after:duration-500 hover:after:w-full" href="#courses">Выбор курса</a>
+            <a class="flex flex-col after:w-0 after:h-px after:bg-[#131313] after:transition-all after:duration-500 hover:after:w-full" href="#career">Карьера</a>
+            <a class="flex flex-col after:w-0 after:h-px after:bg-[#131313] after:transition-all after:duration-500 hover:after:w-full" href="#resume">Резюме</a>
+            <a class="flex flex-col after:w-0 after:h-px after:bg-[#131313] after:transition-all after:duration-500 hover:after:w-full" href="#prices">Тарифы</a>
         </div>
     </header>
     <main class="flex flex-col gap-24 my-14 container mx-auto px-10">
@@ -63,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6" id="advantages">
             <p class="text-3xl font-mono font-semibold">Преимущества</p>
             <div class="grid grid-cols-6 gap-2">
                 <div class="transition-all duration-500 hover:-translate-y-3 rounded-md w-full border border-black/5 shadow-[0px_0px_14px_-11px_black] p-4 flex flex-col gap-2">
@@ -110,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6" id="courses">
             <p class="text-3xl font-mono font-semibold">Выбор курса</p>
             <div class="grid grid-cols-2 gap-6 font-medium">
                 <div class="h-48 relative group">
@@ -199,10 +201,10 @@
                 <a href="" class="w-1/3 text-center py-4 bg-[#e0fb52] rounded-md text-2xl">отправить</a>
             </div>
         </div> 
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6" id="#career">
             <div class="flex items-center justify-between">
                 <p class="text-3xl font-mono font-semibold max-w-md">Поможем строить карьеру уже во время обучения</p>
-                <p class="text-gray-400 text-base max-w-xl font-medium">К концу программы у вас будут не только теоретические знания и практические навыки, но и реальный опыт. Вместе с HR-специалистами составите карьерную стратегию — вам будет понятно, как и куда двигаться дальше, чтобы расти в новой профессии. И уже начнете этот путь.</p>
+                <p class="opacity-70 text-base max-w-xl font-medium">К концу программы у вас будут не только теоретические знания и практические навыки, но и реальный опыт. Вместе с HR-специалистами составите карьерную стратегию — вам будет понятно, как и куда двигаться дальше, чтобы расти в новой профессии. И уже начнете этот путь.</p>
             </div>
             <div class="grid grid-cols-3 gap-6">
                 <div class="relative border border-black/15 w-full h-[150px] rounded-md group">
@@ -295,7 +297,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6" id="resume">
             <p class="text-3xl font-mono font-semibold">Резюме после обучения</p>
             <div class="w-full bg-[#292929] text-white rounded-xl p-6 grid grid-cols-2 gap-24">                
                 <div class="flex flex-col gap-8">
@@ -330,7 +332,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6" id="prices">
             <p class="text-3xl font-mono font-semibold">Тарифы</p>
             <div class="grid grid-cols-4 gap-6">
                 <div class="flex flex-col w-full rounded-md border border-black/10 shadow-[0px_0px_14px_-11px_black]">
@@ -408,7 +410,7 @@
     </main>
     <footer class="container mx-auto px-10 w-full">
         <div class="rounded-xl bg-[#292929] mb-4 text-center py-4 w-full">
-            <a href="" class="font-semibold font-mono bg-[#e0fb52] p-1">© DesignSchool, 2025</a>
+            <a href="#header" class="font-semibold font-mono bg-[#e0fb52] p-1">© DesignSchool, 2025</a>
         </div>
     </footer>
 </body>
